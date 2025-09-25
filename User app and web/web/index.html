@@ -84,16 +84,6 @@
     </div>
   </div>
 
-      <div class="header-end d-flex align-items-center gap-5">
-      <div class="placeholder"></div>
-      <div class="d-flex align-items-center gap-4">
-        <div class="placeholder"></div>
-        <img src="assets/header_icon_1.png" width="16" class="header-icon" loading="eager" alt="">
-        <img src="assets/header_icon_2.png" width="16" class="header-icon" loading="eager" alt="">
-      </div>
-    </div>
-  </div>
-  
 </header>
 
 <!-- Script Goes Here -->
@@ -115,6 +105,31 @@
 </script>
 
 <script>
+    // Check if localStorage is supported in the browser
+      if (typeof(Storage) !== "undefined") {
+        // Get the item from localStorage
+        var itemValue = localStorage.getItem("flutter.theme");
+        // Check if the item exists
+        if (itemValue !== null) {
+          // Check the value of the item
+          if (itemValue === "true") {
+            // If the value is "true", add a class to the body
+            document.body.classList.add("theme-dark");
+          } else {
+            // If the value is not "true", remove the class from the body
+            document.body.classList.remove("theme-light");
+          }
+        } else {
+          console.log("Item not found in localStorage");
+        }
+      } else {
+        console.log("localStorage is not supported in this browser");
+      }
+
+  </script>
+
+
+  <script>
     // Check if localStorage is supported in the browser
       if (typeof(Storage) !== "undefined") {
         // Get the item from localStorage
