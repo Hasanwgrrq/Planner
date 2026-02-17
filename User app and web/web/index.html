@@ -59,20 +59,6 @@
 </div>
 
 
-  <div class="preloader">
-  <div class="preloader-container">
-    <!-- <img width="80" class="preloader-img" src="assets/img/preloader.png" alt=""> -->
-    <div id="animation-container">
-      <img width="80" src="assets/loader_image_1.png" class="animation-image" alt="" />
-      <img width="80" src="assets/loader_image_2.png" class="animation-image" alt="" />
-      <img width="80" src="assets/loader_image_3.png" class="animation-image" alt="" />
-      <img width="80" src="assets/loader_image_4.png" class="animation-image" alt="" />
-      <img width="80" src="assets/loader_image_5.png" class="animation-image" alt="" />
-    </div>
-    <div class="loader"></div>
-  </div>
-</div>
-
 
 
 <!-- Header -->
@@ -91,21 +77,6 @@
 
 
 
-      
-      <header class="header">
-  <div class="header-top-line"></div>
-  <div class="header-container d-flex align-items-center justify-content-between">
-    <div class="header-start d-flex gap-5 align-items-center">
-      <img class="logo" src="assets/logo.png" loading="eager" alt="">
-      <div class="placeholder placeholder-wide"></div>
-      <div class="d-flex align-items-center gap-4">
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-      </div>
-
-
     </div>
     <div class="header-end d-flex align-items-center gap-5">
       <div class="placeholder"></div>
@@ -118,29 +89,6 @@
   </div>
 
 
-
-                    </div>
-    <div class="header-end d-flex align-items-center gap-5">
-      <div class="placeholder"></div>
-      <div class="d-flex align-items-center gap-4">
-        <div class="placeholder"></div>
-        <img src="assets/header_icon_1.png" width="16" class="header-icon" loading="eager" alt="">
-        <img src="assets/header_icon_2.png" width="16" class="header-icon" loading="eager" alt="">
-      </div>
-    </div>
-  </div>
-
-  
-                    </div>
-    <div class="header-end d-flex align-items-center gap-5">
-      <div class="placeholder"></div>
-      <div class="d-flex align-items-center gap-4">
-        <div class="placeholder"></div>
-        <img src="assets/header_icon_1.png" width="16" class="header-icon" loading="eager" alt="">
-        <img src="assets/header_icon_2.png" width="16" class="header-icon" loading="eager" alt="">
-      </div>
-    </div>
-  </div>
 
 
   
@@ -194,6 +142,85 @@
 
 
 <!-- Script Goes Here -->
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var images = document.querySelectorAll(".animation-image");
+        var currentIndex = 0;
+        function cycleImages() {
+            var currentImage = images[currentIndex];
+            var nextIndex = (currentIndex + 1) % images.length;
+            var nextImage = images[nextIndex];
+            currentImage.style.display = "none";
+            nextImage.style.display = "block";
+            currentIndex = nextIndex;
+        }
+        // Set an interval to call the cycleImages function every 3 seconds
+        setInterval(cycleImages, 250);
+        });
+</script>
+
+
+  <!-- Script Goes Here -->
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var images = document.querySelectorAll(".animation-image");
+        var currentIndex = 0;
+        function cycleImages() {
+            var currentImage = images[currentIndex];
+            var nextIndex = (currentIndex + 1) % images.length;
+            var nextImage = images[nextIndex];
+            currentImage.style.display = "none";
+            nextImage.style.display = "block";
+            currentIndex = nextIndex;
+        }
+        // Set an interval to call the cycleImages function every 3 seconds
+        setInterval(cycleImages, 250);
+        });
+</script>
+
+
+
+  <!-- Script Goes Here -->
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var images = document.querySelectorAll(".animation-image");
+        var currentIndex = 0;
+        function cycleImages() {
+            var currentImage = images[currentIndex];
+            var nextIndex = (currentIndex + 1) % images.length;
+            var nextImage = images[nextIndex];
+            currentImage.style.display = "none";
+            nextImage.style.display = "block";
+            currentIndex = nextIndex;
+        }
+        // Set an interval to call the cycleImages function every 3 seconds
+        setInterval(cycleImages, 250);
+        });
+</script>
+
+
+
+  <!-- Script Goes Here -->
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var images = document.querySelectorAll(".animation-image");
+        var currentIndex = 0;
+        function cycleImages() {
+            var currentImage = images[currentIndex];
+            var nextIndex = (currentIndex + 1) % images.length;
+            var nextImage = images[nextIndex];
+            currentImage.style.display = "none";
+            nextImage.style.display = "block";
+            currentIndex = nextIndex;
+        }
+        // Set an interval to call the cycleImages function every 3 seconds
+        setInterval(cycleImages, 250);
+        });
+</script>
+
+
+
+  <!-- Script Goes Here -->
 <script>
         document.addEventListener("DOMContentLoaded", function () {
         var images = document.querySelectorAll(".animation-image");
