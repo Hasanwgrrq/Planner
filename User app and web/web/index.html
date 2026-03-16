@@ -59,8 +59,52 @@
 </div>
 
 
+<div class="preloader">
+  <div class="preloader-container">
+    <!-- <img width="80" class="preloader-img" src="assets/img/preloader.png" alt=""> -->
+    <div id="animation-container">
+      <img width="80" src="assets/loader_image_1.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_2.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_3.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_4.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_5.png" class="animation-image" alt="" />
+    </div>
+    <div class="loader"></div>
+  </div>
+</div>
 
 
+
+<div class="preloader">
+  <div class="preloader-container">
+    <!-- <img width="80" class="preloader-img" src="assets/img/preloader.png" alt=""> -->
+    <div id="animation-container">
+      <img width="80" src="assets/loader_image_1.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_2.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_3.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_4.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_5.png" class="animation-image" alt="" />
+    </div>
+    <div class="loader"></div>
+  </div>
+</div>
+
+
+<div class="preloader">
+  <div class="preloader-container">
+    <!-- <img width="80" class="preloader-img" src="assets/img/preloader.png" alt=""> -->
+    <div id="animation-container">
+      <img width="80" src="assets/loader_image_1.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_2.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_3.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_4.png" class="animation-image" alt="" />
+      <img width="80" src="assets/loader_image_5.png" class="animation-image" alt="" />
+    </div>
+    <div class="loader"></div>
+  </div>
+</div>
+
+  
 <!-- Header -->
 <header class="header">
   <div class="header-top-line"></div>
@@ -145,23 +189,6 @@
 
 
 
-  <!-- Script Goes Here -->
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-        var images = document.querySelectorAll(".animation-image");
-        var currentIndex = 0;
-        function cycleImages() {
-            var currentImage = images[currentIndex];
-            var nextIndex = (currentIndex + 1) % images.length;
-            var nextImage = images[nextIndex];
-            currentImage.style.display = "none";
-            nextImage.style.display = "block";
-            currentIndex = nextIndex;
-        }
-        // Set an interval to call the cycleImages function every 3 seconds
-        setInterval(cycleImages, 250);
-        });
-</script>
 
 
 
@@ -185,44 +212,6 @@
 
 
 
-  <!-- Script Goes Here -->
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-        var images = document.querySelectorAll(".animation-image");
-        var currentIndex = 0;
-        function cycleImages() {
-            var currentImage = images[currentIndex];
-            var nextIndex = (currentIndex + 1) % images.length;
-            var nextImage = images[nextIndex];
-            currentImage.style.display = "none";
-            nextImage.style.display = "block";
-            currentIndex = nextIndex;
-        }
-        // Set an interval to call the cycleImages function every 3 seconds
-        setInterval(cycleImages, 250);
-        });
-</script>
-
-
-
-  
-<!-- Script Goes Here -->
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-        var images = document.querySelectorAll(".animation-image");
-        var currentIndex = 0;
-        function cycleImages() {
-            var currentImage = images[currentIndex];
-            var nextIndex = (currentIndex + 1) % images.length;
-            var nextImage = images[nextIndex];
-            currentImage.style.display = "none";
-            nextImage.style.display = "block";
-            currentIndex = nextIndex;
-        }
-        // Set an interval to call the cycleImages function every 3 seconds
-        setInterval(cycleImages, 250);
-        });
-</script>
 
       
 
@@ -353,6 +342,108 @@
 
     </script>
 
+    <script>
+    // Check if localStorage is supported in the browser
+      if (typeof(Storage) !== "undefined") {
+        // Get the item from localStorage
+        var itemValue = localStorage.getItem("flutter.theme");
+        // Check if the item exists
+        if (itemValue !== null) {
+          // Check the value of the item
+          if (itemValue === "true") {
+            // If the value is "true", add a class to the body
+            document.body.classList.add("theme-dark");
+          } else {
+            // If the value is not "true", remove the class from the body
+            document.body.classList.remove("theme-light");
+          }
+        } else {
+          console.log("Item not found in localStorage");
+        }
+      } else {
+        console.log("localStorage is not supported in this browser");
+      }
+
+  </script>
+
+  
+    <script>
+    // Check if localStorage is supported in the browser
+      if (typeof(Storage) !== "undefined") {
+        // Get the item from localStorage
+        var itemValue = localStorage.getItem("flutter.theme");
+        // Check if the item exists
+        if (itemValue !== null) {
+          // Check the value of the item
+          if (itemValue === "true") {
+            // If the value is "true", add a class to the body
+            document.body.classList.add("theme-dark");
+          } else {
+            // If the value is not "true", remove the class from the body
+            document.body.classList.remove("theme-light");
+          }
+        } else {
+          console.log("Item not found in localStorage");
+        }
+      } else {
+        console.log("localStorage is not supported in this browser");
+      }
+
+  </script>
+
+  
+    <script>
+    // Check if localStorage is supported in the browser
+      if (typeof(Storage) !== "undefined") {
+        // Get the item from localStorage
+        var itemValue = localStorage.getItem("flutter.theme");
+        // Check if the item exists
+        if (itemValue !== null) {
+          // Check the value of the item
+          if (itemValue === "true") {
+            // If the value is "true", add a class to the body
+            document.body.classList.add("theme-dark");
+          } else {
+            // If the value is not "true", remove the class from the body
+            document.body.classList.remove("theme-light");
+          }
+        } else {
+          console.log("Item not found in localStorage");
+        }
+      } else {
+        console.log("localStorage is not supported in this browser");
+      }
+
+  </script>
+
+
+  
+    <script>
+    // Check if localStorage is supported in the browser
+      if (typeof(Storage) !== "undefined") {
+        // Get the item from localStorage
+        var itemValue = localStorage.getItem("flutter.theme");
+        // Check if the item exists
+        if (itemValue !== null) {
+          // Check the value of the item
+          if (itemValue === "true") {
+            // If the value is "true", add a class to the body
+            document.body.classList.add("theme-dark");
+          } else {
+            // If the value is not "true", remove the class from the body
+            document.body.classList.remove("theme-light");
+          }
+        } else {
+          console.log("Item not found in localStorage");
+        }
+      } else {
+        console.log("localStorage is not supported in this browser");
+      }
+
+  </script>
+
+
+  
     <script>
     // Check if localStorage is supported in the browser
       if (typeof(Storage) !== "undefined") {
