@@ -12,6 +12,35 @@
           "package_name": "com.sixamtech.efood"
         }
       },
+         {
+      "client_info": {
+        "mobilesdk_app_id": "1:410522356318:android:ed53435b87e4bb553dc2cf",
+        "android_client_info": {
+          "package_name": "com.sixamtech.efood"
+        }
+      },
+         {
+      "client_info": {
+        "mobilesdk_app_id": "1:410522356318:android:ed53435b87e4bb553dc2cf",
+        "android_client_info": {
+          "package_name": "com.sixamtech.efood"
+        }
+      },
+         {
+      "client_info": {
+        "mobilesdk_app_id": "1:410522356318:android:ed53435b87e4bb553dc2cf",
+        "android_client_info": {
+          "package_name": "com.sixamtech.efood"
+        }
+      },
+         {
+      "client_info": {
+        "mobilesdk_app_id": "1:410522356318:android:ed53435b87e4bb553dc2cf",
+        "android_client_info": {
+          "package_name": "com.sixamtech.efood"
+        }
+      },
+      
       "oauth_client": [
         {
           "client_id": "410522356318-7tlcgno659c5evkndbjg2gtjloskr7mf.apps.googleusercontent.com",
@@ -127,6 +156,63 @@
           "current_key": "AIzaSyB7Uag9C-fHlCncDgLYtnN08TzIpKzKaj8"
         }
       ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410522356318-0m721qqiuria4ssofsjic7kt7k6ep154.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "410522356318-43pl1qmq619t6800lmilft67nbq4s8cm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sixamtech.eFood"
+              }
+            }
+          ]
+        }
+      }
+    },
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410522356318-0m721qqiuria4ssofsjic7kt7k6ep154.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "410522356318-43pl1qmq619t6800lmilft67nbq4s8cm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sixamtech.eFood"
+              }
+            }
+          ]
+        }
+      }
+    },
+  ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410522356318-0m721qqiuria4ssofsjic7kt7k6ep154.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "410522356318-43pl1qmq619t6800lmilft67nbq4s8cm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sixamtech.eFood"
+              }
+            }
+          ]
+        }
+      }
+    },
+  ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
