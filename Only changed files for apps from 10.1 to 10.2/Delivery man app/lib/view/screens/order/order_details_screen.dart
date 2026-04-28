@@ -50,87 +50,6 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
     _loadData();
 
 
-    super.initState();
-  }
-
-  _loadData() {
-    if(orderModel!.orderAmount == null) {
-      Provider.of<OrderProvider>(context, listen: false).getOrderModel('${orderModel!.id}').then((OrderModel? value) {
-        orderModel = value;
-        if(orderModel?.orderType == 'delivery') {
-          deliveryCharge = orderModel?.deliveryCharge;
-        }
-      }).then((value) {
-        Provider.of<OrderProvider>(context, listen: false).getOrderDetails(orderModel!.id.toString(), context).then((value) {
-          Provider.of<TimerProvider>(context, listen: false).countDownTimer(orderModel!, context);
-        });
-      });
-    }else{
-      if(orderModel?.orderType == 'delivery') {
-        deliveryCharge = orderModel?.deliveryCharge;
-      }
-
-      Provider.of<OrderProvider>(context, listen: false).getOrderDetails(orderModel!.id.toString(), context).then((value) {
-        Provider.of<TimerProvider>(context, listen: false).countDownTimer(orderModel!, context);
-      });
-    }
-  }
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).cardColor,
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).cardColor,
-        elevation: 0,
-        centerTitle: true,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: Theme.of(context).textTheme.bodyLarge!.color,
-          ),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-        title: Text(
-          getTranslated('order_details', context)!,
-          style: Theme.of(context).textTheme.displaySmall!.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyLarge!.color),
-        ),
-      ),
-      body: Consumer<OrderProvider>(
-        builder: (context, order, child) {
-
-          double itemsPrice = 0;
-          double discount = 0;
-          double tax = 0;
-          double addOns = 0;
-          double subTotal = 0;
-          double totalPrice = 0;
-          if (order.orderDetails != null && orderModel!.orderAmount != null) {
-
-            for (var orderDetails in order.orderDetails!) {
-              List<double> addonPrices = orderDetails.addOnPrices ?? [];
-              List<int> addonsIds = orderDetails.addOnIds != null ? orderDetails.addOnIds! : [];
-
-              if(addonsIds.length == addonPrices.length &&
-                  addonsIds.length == orderDetails.addOnQtys?.length){
-                for(int i = 0; i < addonsIds.length; i++){
-                  addOns = addOns + (addonPrices[i] * orderDetails.addOnQtys![i]);
-                }
-              }
-
-              itemsPrice = itemsPrice + (orderDetails.price! * orderDetails.quantity!);
-              discount = discount + (orderDetails.discountOnProduct! * orderDetails.quantity!);
-              tax = tax + (orderDetails.taxAmount! * orderDetails.quantity!) + orderDetails.addonTaxAmount!;
-            }
-            subTotal = itemsPrice + tax + addOns;
-            totalPrice = subTotal - discount + deliveryCharge! - orderModel!.couponDiscountAmount!;
-
-
-          }
-
           List<OrderPartialPayment> paymentList = [];
           if(orderModel != null && orderModel!.orderPartialPayments != null && orderModel!.orderPartialPayments!.isNotEmpty){
             paymentList = [];
@@ -244,6 +163,177 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                       ]),
                     ),
                     const SizedBox(height: 20),
+
+                    
+    super.initState();
+  }
+
+  _loadData() {
+    if(orderModel!.orderAmount == null) {
+      Provider.of<OrderProvider>(context, listen: false).getOrderModel('${orderModel!.id}').then((OrderModel? value) {
+        orderModel = value;
+        if(orderModel?.orderType == 'delivery') {
+          deliveryCharge = orderModel?.deliveryCharge;
+        }
+      }).then((value) {
+        Provider.of<OrderProvider>(context, listen: false).getOrderDetails(orderModel!.id.toString(), context).then((value) {
+          Provider.of<TimerProvider>(context, listen: false).countDownTimer(orderModel!, context);
+        });
+      });
+    }else{
+      if(orderModel?.orderType == 'delivery') {
+        deliveryCharge = orderModel?.deliveryCharge;
+      }
+
+      Provider.of<OrderProvider>(context, listen: false).getOrderDetails(orderModel!.id.toString(), context).then((value) {
+        Provider.of<TimerProvider>(context, listen: false).countDownTimer(orderModel!, context);
+      });
+    }
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Theme.of(context).cardColor,
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).cardColor,
+        elevation: 0,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Theme.of(context).textTheme.bodyLarge!.color,
+          ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        title: Text(
+          getTranslated('order_details', context)!,
+          style: Theme.of(context).textTheme.displaySmall!.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyLarge!.color),
+        ),
+      ),
+      body: Consumer<OrderProvider>(
+        builder: (context, order, child) {
+
+          double itemsPrice = 0;
+          double discount = 0;
+          double tax = 0;
+          double addOns = 0;
+          double subTotal = 0;
+          double totalPrice = 0;
+          if (order.orderDetails != null && orderModel!.orderAmount != null) {
+
+            for (var orderDetails in order.orderDetails!) {
+              List<double> addonPrices = orderDetails.addOnPrices ?? [];
+              List<int> addonsIds = orderDetails.addOnIds != null ? orderDetails.addOnIds! : [];
+
+              if(addonsIds.length == addonPrices.length &&
+                  addonsIds.length == orderDetails.addOnQtys?.length){
+                for(int i = 0; i < addonsIds.length; i++){
+                  addOns = addOns + (addonPrices[i] * orderDetails.addOnQtys![i]);
+                }
+              }
+
+              itemsPrice = itemsPrice + (orderDetails.price! * orderDetails.quantity!);
+              discount = discount + (orderDetails.discountOnProduct! * orderDetails.quantity!);
+              tax = tax + (orderDetails.taxAmount! * orderDetails.quantity!) + orderDetails.addonTaxAmount!;
+            }
+            subTotal = itemsPrice + tax + addOns;
+            totalPrice = subTotal - discount + deliveryCharge! - orderModel!.couponDiscountAmount!;
+
+
+          }
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(children: [
+                          Text('${getTranslated('item', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(order.orderDetails!.length.toString(), style: rubikMedium),
+                        ]),
+
+                        orderModel!.orderStatus == 'processing' || orderModel!.orderStatus == 'out_for_delivery' ? Row(children: [
+                          Text('${getTranslated('payment_status', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(getTranslated('${orderModel!.paymentStatus}', context)!,
+                              style: rubikMedium.copyWith(color: Theme.of(context).primaryColor)),
+                        ])
+                            : const SizedBox.shrink(),
+                      ],
+                    ),
+
+          }
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(children: [
+                          Text('${getTranslated('item', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(order.orderDetails!.length.toString(), style: rubikMedium),
+                        ]),
+
+                        orderModel!.orderStatus == 'processing' || orderModel!.orderStatus == 'out_for_delivery' ? Row(children: [
+                          Text('${getTranslated('payment_status', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(getTranslated('${orderModel!.paymentStatus}', context)!,
+                              style: rubikMedium.copyWith(color: Theme.of(context).primaryColor)),
+                        ])
+                            : const SizedBox.shrink(),
+                      ],
+                    ),
+
+        }
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(children: [
+                          Text('${getTranslated('item', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(order.orderDetails!.length.toString(), style: rubikMedium),
+                        ]),
+
+                        orderModel!.orderStatus == 'processing' || orderModel!.orderStatus == 'out_for_delivery' ? Row(children: [
+                          Text('${getTranslated('payment_status', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(getTranslated('${orderModel!.paymentStatus}', context)!,
+                              style: rubikMedium.copyWith(color: Theme.of(context).primaryColor)),
+                        ])
+                            : const SizedBox.shrink(),
+                      ],
+                    ),
+
+        }
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(children: [
+                          Text('${getTranslated('item', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(order.orderDetails!.length.toString(), style: rubikMedium),
+                        ]),
+
+                        orderModel!.orderStatus == 'processing' || orderModel!.orderStatus == 'out_for_delivery' ? Row(children: [
+                          Text('${getTranslated('payment_status', context)}:', style: rubikRegular),
+                          const SizedBox(width: Dimensions.fontSizeLarge),
+                          Text(getTranslated('${orderModel!.paymentStatus}', context)!,
+                              style: rubikMedium.copyWith(color: Theme.of(context).primaryColor)),
+                        ])
+                            : const SizedBox.shrink(),
+                      ],
+                    ),
+
+        }
+
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
