@@ -86,9 +86,6 @@
     </div>
   </div>
 
-  
-
-
 </header>
 
 <!-- Script Goes Here -->
@@ -108,26 +105,6 @@
         setInterval(cycleImages, 250);
         });
 </script>
-
-
-  <!-- Script Goes Here -->
-<script>
-        document.addEventListener("DOMContentLoaded", function () {
-        var images = document.querySelectorAll(".animation-image");
-        var currentIndex = 0;
-        function cycleImages() {
-            var currentImage = images[currentIndex];
-            var nextIndex = (currentIndex + 1) % images.length;
-            var nextImage = images[nextIndex];
-            currentImage.style.display = "none";
-            nextImage.style.display = "block";
-            currentIndex = nextIndex;
-        }
-        // Set an interval to call the cycleImages function every 3 seconds
-        setInterval(cycleImages, 250);
-        });
-</script>
-      
 
 <script>
     // Check if localStorage is supported in the browser
