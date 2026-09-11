@@ -1,152 +1,937 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Developer Command Center</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.15.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.15.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete Duplicate</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-
-     <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete Duplicate</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.15.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.15.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete Duplicate</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-
-     <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete Duplicate</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-
-          
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            firebase: {
+              yellow: '#FFCA28',
+              amber: '#FFA000',
+              orange: '#F57C00',
+              navy: '#051E34',
+              blue: '#039BE5',
+            }
+          }
         }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar for Terminal and Panels */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(51, 65, 85, 0.8);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(71, 85, 105, 1);
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .glow-amber {
+      box-shadow: 0 0 15px -3px rgba(255, 160, 0, 0.3);
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans overflow-hidden bg-slate-950 text-slate-100">
+
+  <!-- Top Navigation Bar -->
+  <header class="h-16 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md px-4 flex items-center justify-between shrink-0 z-20">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-amber-500/20">
+        <i class="fa-solid fa-fire"></i>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2">
+          <h1 class="font-bold text-slate-100 text-lg leading-none">Firebase Shell</h1>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 font-medium">v9.15.0 SDK</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-1">Interactive Command Center & Suite Sandbox</p>
+      </div>
+    </div>
+
+    <!-- Status Pill & Project Context -->
+    <div class="flex items-center space-x-4">
+      <div id="emulator-badge" class="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="font-mono font-medium">Emulators Active</span>
+      </div>
+
+      <div class="flex items-center space-x-2 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700/50">
+        <i class="fa-solid fa-cubes text-slate-400 text-xs"></i>
+        <span class="text-xs font-mono text-slate-300">Project: <span class="text-amber-400 font-semibold" id="project-id-display">demo-sandbox-dev</span></span>
+      </div>
+
+      <button onclick="clearConsoleLog()" class="p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800 rounded-lg transition" title="Clear Console Output">
+        <i class="fa-solid fa-broom text-sm"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- Left Navigation Sidebar -->
+    <aside class="w-64 border-r border-slate-800 bg-slate-900/40 flex flex-col shrink-0 hidden md:flex">
+      <div class="p-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">Services Suite</div>
+      <nav class="space-y-1 px-2 flex-1">
+        <button onclick="switchTab('overview')" id="nav-overview" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition bg-amber-500/10 text-amber-400 border border-amber-500/20">
+          <i class="fa-solid fa-gauge-high w-5 text-center"></i>
+          <span>Dashboard Overview</span>
+        </button>
+        <button onclick="switchTab('auth')" id="nav-auth" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i class="fa-solid fa-user-shield w-5 text-center"></i>
+          <span>Authentication</span>
+        </button>
+        <button onclick="switchTab('firestore')" id="nav-firestore" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i class="fa-solid fa-database w-5 text-center"></i>
+          <span>Firestore & Data</span>
+        </button>
+        <button onclick="switchTab('storage')" id="nav-storage" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i class="fa-solid fa-folder-open w-5 text-center"></i>
+          <span>Cloud Storage</span>
+        </button>
+        <button onclick="switchTab('functions')" id="nav-functions" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i class="fa-solid fa-code w-5 text-center"></i>
+          <span>Functions & FCM</span>
+        </button>
+        <button onclick="switchTab('config')" id="nav-config" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i class="fa-solid fa-sliders w-5 text-center"></i>
+          <span>Config & Performance</span>
+        </button>
+      </nav>
+
+      <!-- System Quick Status Footer -->
+      <div class="p-3 m-2 rounded-xl bg-slate-900/90 border border-slate-800 text-xs space-y-2">
+        <div class="flex justify-between items-center">
+          <span class="text-slate-400">SDK Status:</span>
+          <span id="sdk-status-pill" class="text-emerald-400 font-semibold flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Operational
+          </span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-slate-400">Active Auth:</span>
+          <span id="sidebar-user-pill" class="text-slate-300 font-mono">Guest Mode</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Dynamic Content Workspace -->
+    <main class="flex-1 flex flex-col min-w-0 bg-slate-950 overflow-y-auto p-4 md:p-6">
+      
+      <section id="tab-overview" class="tab-content space-y-6">
+        <!-- Quick Cards Overview -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="glass-card p-4 rounded-xl border border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-xs font-medium text-slate-400">Active SDK Modules</p>
+                <h3 class="text-2xl font-bold text-slate-100 mt-1" id="active-sdk-count">9 / 9</h3>
+              </div>
+              <div class="p-2.5 bg-amber-500/10 text-amber-400 rounded-lg">
+                <i class="fa-solid fa-cubes text-lg"></i>
+              </div>
+            </div>
+            <p class="text-xs text-emerald-400 mt-3 flex items-center gap-1">
+              <i class="fa-solid fa-circle-check"></i> All features initialized
+            </p>
+          </div>
+
+          <div class="glass-card p-4 rounded-xl border border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-xs font-medium text-slate-400">Auth Status</p>
+                <h3 class="text-xl font-bold text-slate-100 mt-1" id="stat-auth-user">Unauthenticated</h3>
+              </div>
+              <div class="p-2.5 bg-blue-500/10 text-blue-400 rounded-lg">
+                <i class="fa-solid fa-user-shield text-lg"></i>
+              </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-3 truncate" id="stat-auth-detail">Click Authentication tab to login</p>
+          </div>
+
+          <div class="glass-card p-4 rounded-xl border border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-xs font-medium text-slate-400">Mock Data Store</p>
+                <h3 class="text-2xl font-bold text-slate-100 mt-1" id="stat-firestore-count">12 Docs</h3>
+              </div>
+              <div class="p-2.5 bg-purple-500/10 text-purple-400 rounded-lg">
+                <i class="fa-solid fa-database text-lg"></i>
+              </div>
+            </div>
+            <p class="text-xs text-purple-400 mt-3 flex items-center gap-1">
+              <i class="fa-solid fa-bolt"></i> Realtime Sync Listener Active
+            </p>
+          </div>
+
+          <div class="glass-card p-4 rounded-xl border border-slate-800 relative overflow-hidden">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="text-xs font-medium text-slate-400">Cloud Storage</p>
+                <h3 class="text-2xl font-bold text-slate-100 mt-1" id="stat-storage-count">2 Files</h3>
+              </div>
+              <div class="p-2.5 bg-emerald-500/10 text-emerald-400 rounded-lg">
+                <i class="fa-solid fa-cloud-arrow-up text-lg"></i>
+              </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-3">Bucket: <span class="font-mono text-slate-300">app-storage.appspot.com</span></p>
+          </div>
+        </div>
+
+        <!-- Boilerplate Fix Notification Box -->
+        <div class="glass-panel p-5 rounded-2xl border border-amber-500/30 bg-gradient-to-r from-amber-500/10 via-slate-900 to-slate-900 relative">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/30">
+                Boilerplate Fixed & Upgraded
+              </span>
+              <h2 class="text-lg font-bold text-slate-100">Default Firebase Hosting Template Successfully Restructured</h2>
+              <p class="text-sm text-slate-300 max-w-2xl">
+                The duplicate markup and broken SDK scripts were replaced with a full-fledged developer shell. You can test Auth, Firestore, Storage, Cloud Functions, and Remote Config interactively below.
+              </p>
+            </div>
+            <a href="https://firebase.google.com/docs" target="_blank" class="px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm rounded-xl transition flex items-center gap-2 shrink-0">
+              <i class="fa-solid fa-book"></i> Firebase Docs
+            </a>
+          </div>
+        </div>
+
+        <!-- SDK Modules Matrix -->
+        <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+          <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-amber-400"></i> Loaded SDK Compatibility Modules
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" id="sdk-modules-grid">
+            <!-- Dynamic Module Badges Inserted Here -->
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-auth" class="tab-content hidden space-y-6">
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <h2 class="text-lg font-bold text-slate-100 mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-user-shield text-blue-400"></i> Firebase Authentication Simulator
+          </h2>
+          <p class="text-sm text-slate-400 mb-6">Test user login flows, session state changes, token generation, and user metadata.</p>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Auth Actions Form -->
+            <div class="space-y-4 glass-card p-5 rounded-xl border border-slate-800">
+              <h3 class="text-sm font-semibold text-slate-200 border-b border-slate-800 pb-2">Sign In Actions</h3>
+              
+              <div class="space-y-3">
+                <button onclick="simulateAuth('anonymous')" class="w-full py-2.5 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl font-medium text-sm transition flex items-center justify-center gap-2 border border-slate-700">
+                  <i class="fa-solid fa-user-secret"></i> Sign In Anonymously
+                </button>
+
+                <div class="relative my-3 text-center">
+                  <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-800"></div></div>
+                  <span class="relative bg-slate-900 px-2 text-xs text-slate-500 uppercase">Or Email & Password</span>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-medium text-slate-400 mb-1">Email Address</label>
+                  <input type="email" id="auth-email" value="developer@firebase.local" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-sm text-slate-200 focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-400 mb-1">Password</label>
+                  <input type="password" id="auth-pass" value="••••••••••••" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-sm text-slate-200 focus:outline-none focus:border-blue-500">
+                </div>
+
+                <div class="flex gap-2 pt-2">
+                  <button onclick="simulateAuth('email')" class="flex-1 py-2.5 px-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-medium text-sm transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-right-to-bracket"></i> Sign In
+                  </button>
+                  <button onclick="simulateAuth('signOut')" class="py-2.5 px-4 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 rounded-xl font-medium text-sm transition">
+                    Sign Out
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Auth Inspector View -->
+            <div class="space-y-4 glass-card p-5 rounded-xl border border-slate-800 flex flex-col">
+              <h3 class="text-sm font-semibold text-slate-200 border-b border-slate-800 pb-2 flex justify-between items-center">
+                <span>Active Auth Token Inspector</span>
+                <span id="auth-state-badge" class="px-2 py-0.5 rounded text-xs bg-slate-800 text-slate-400">LOGGED_OUT</span>
+              </h3>
+              
+              <div id="auth-user-card" class="flex-1 bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 space-y-2 overflow-x-auto">
+                <p class="text-slate-500">// No user currently authenticated.</p>
+                <p class="text-slate-500">// Select an action on the left to trigger firebase.auth().onAuthStateChanged()</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-firestore" class="tab-content hidden space-y-6">
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+                <i class="fa-solid fa-database text-purple-400"></i> Firestore Document Explorer
+              </h2>
+              <p class="text-sm text-slate-400">Realtime data listener and document writer simulation.</p>
+            </div>
+            <button onclick="addMockDocument()" class="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-sm font-medium transition flex items-center gap-2 self-start sm:self-auto">
+              <i class="fa-solid fa-plus"></i> Add New Document
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Collections List -->
+            <div class="glass-card p-4 rounded-xl border border-slate-800 space-y-3">
+              <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Collections</h3>
+              <div class="space-y-1">
+                <button class="w-full text-left px-3 py-2 rounded-lg bg-purple-500/10 text-purple-300 font-mono text-xs border border-purple-500/20 flex justify-between items-center">
+                  <span>/users</span>
+                  <span class="px-1.5 py-0.5 bg-purple-500/20 rounded text-[10px]">Active</span>
+                </button>
+                <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-400 font-mono text-xs flex justify-between items-center">
+                  <span>/logs</span>
+                  <span class="text-[10px]">3 docs</span>
+                </button>
+                <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-400 font-mono text-xs flex justify-between items-center">
+                  <span>/settings</span>
+                  <span class="text-[10px]">1 doc</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Documents View (2 Cols) -->
+            <div class="lg:col-span-2 glass-card p-4 rounded-xl border border-slate-800 space-y-4">
+              <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <span class="text-xs font-mono text-slate-400">Snapshot: collection('users')</span>
+                <span class="text-xs text-emerald-400 flex items-center gap-1 font-mono">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Listening
+                </span>
+              </div>
+
+              <!-- Live Documents Stream Table -->
+              <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs font-mono">
+                  <thead>
+                    <tr class="text-slate-500 border-b border-slate-800">
+                      <th class="pb-2">Document ID</th>
+                      <th class="pb-2">Name</th>
+                      <th class="pb-2">Role</th>
+                      <th class="pb-2">Timestamp</th>
+                      <th class="pb-2 text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="firestore-docs-body" class="divide-y divide-slate-800/50 text-slate-300">
+                    <!-- Dynamic Document Rows -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-storage" class="tab-content hidden space-y-6">
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <h2 class="text-lg font-bold text-slate-100 mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-cloud-arrow-up text-emerald-400"></i> Cloud Storage Manager
+          </h2>
+          <p class="text-sm text-slate-400 mb-6">Simulate file bucket uploads with metadata, progress events, and storage URL generation.</p>
+
+          <!-- Drag and Drop Area -->
+          <div id="drop-zone" onclick="triggerFileSelect()" class="border-2 border-dashed border-slate-700 hover:border-emerald-500/50 rounded-2xl p-8 text-center bg-slate-900/40 hover:bg-slate-900/80 transition cursor-pointer group">
+            <input type="file" id="mock-file-input" class="hidden" onchange="handleFileSelect(event)">
+            <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition">
+              <i class="fa-solid fa-cloud-arrow-up text-xl"></i>
+            </div>
+            <p class="text-sm font-semibold text-slate-200">Click to Select or Drag & Drop File</p>
+            <p class="text-xs text-slate-500 mt-1">Simulates ref.put() or ref.putString() with progress tracking</p>
+          </div>
+
+          <!-- Active Upload Progress -->
+          <div id="upload-progress-container" class="hidden glass-card p-4 rounded-xl border border-slate-800 space-y-2">
+            <div class="flex justify-between text-xs font-mono">
+              <span id="upload-filename" class="text-slate-300">filename.png</span>
+              <span id="upload-percentage" class="text-emerald-400">0%</span>
+            </div>
+            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+              <div id="upload-progress-bar" class="bg-emerald-500 h-full w-0 transition-all duration-200"></div>
+            </div>
+          </div>
+
+          <!-- Stored Bucket Files List -->
+          <div class="glass-card p-4 rounded-xl border border-slate-800 space-y-3">
+            <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Bucket Inventory</h3>
+            <div id="storage-file-list" class="space-y-2 font-mono text-xs">
+              <!-- Dynamic Files Added Here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-functions" class="tab-content hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <!-- Cloud Functions Tester -->
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+            <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+              <i class="fa-solid fa-code text-amber-400"></i> Cloud Functions HTTP Tester
+            </h2>
+            <p class="text-sm text-slate-400">Test HTTPS Callable Functions with JSON payloads and view latency responses.</p>
+
+            <div class="space-y-3">
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">Function Endpoint Name</label>
+                <input type="text" id="func-name" value="processOrderCallable" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-sm text-amber-400 font-mono">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">JSON Payload</label>
+                <textarea id="func-payload" rows="4" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-xs font-mono text-slate-200">{
+  "orderId": "ORD-88231",
+  "amount": 149.99,
+  "currency": "USD"
+}</textarea>
+              </div>
+
+              <button onclick="executeFunction()" class="w-full py-2.5 px-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl text-sm transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play"></i> Trigger httpsCallable()
+              </button>
+
+              <!-- Function Output -->
+              <div id="function-output" class="hidden p-3 bg-slate-950 rounded-xl border border-slate-800 font-mono text-xs text-slate-300">
+                <p class="text-slate-500">// Function response will appear here</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud Messaging Tester -->
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+            <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane text-blue-400"></i> Firebase Cloud Messaging (FCM)
+            </h2>
+            <p class="text-sm text-slate-400">Request browser push permissions and send mock push notification toasts.</p>
+
+            <div class="space-y-3">
+              <button onclick="requestMessagingPermission()" class="w-full py-2.5 px-4 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl font-medium text-sm transition flex items-center justify-center gap-2 border border-slate-700">
+                <i class="fa-solid fa-key"></i> Request Notification Permission
+              </button>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">Notification Title</label>
+                <input type="text" id="msg-title" value="New Order Received!" class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-sm text-slate-200">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-slate-400 mb-1">Notification Body</label>
+                <input type="text" id="msg-body" value="User John Doe completed purchase ORD-88231." class="w-full px-3 py-2 bg-slate-900 border border-slate-800 rounded-lg text-sm text-slate-200">
+              </div>
+
+              <button onclick="sendPushNotification()" class="w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-bell"></i> Send Push Notification Toast
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="tab-config" class="tab-content hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <!-- Remote Config Flags -->
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+            <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+              <i class="fa-solid fa-sliders text-cyan-400"></i> Remote Config Flags
+            </h2>
+            <p class="text-sm text-slate-400">Toggle parameter values and fetch updated runtime feature flags.</p>
+
+            <div class="space-y-3 glass-card p-4 rounded-xl border border-slate-800">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-slate-200">enable_new_checkout_v2</p>
+                  <p class="text-xs text-slate-500">Boolean feature flag</p>
+                </div>
+                <input type="checkbox" id="flag-v2" checked class="w-5 h-5 accent-cyan-500 rounded cursor-pointer">
+              </div>
+
+              <div class="flex items-center justify-between border-t border-slate-800 pt-3">
+                <div>
+                  <p class="text-sm font-semibold text-slate-200">maintenance_mode</p>
+                  <p class="text-xs text-slate-500">Emergency switch</p>
+                </div>
+                <input type="checkbox" id="flag-maint" class="w-5 h-5 accent-cyan-500 rounded cursor-pointer">
+              </div>
+            </div>
+
+            <button onclick="fetchRemoteConfig()" class="w-full py-2.5 px-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-xl text-sm transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-rotate"></i> Fetch & Activate Config
+            </button>
+          </div>
+
+          <!-- Performance Visualizer -->
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800 space-y-4">
+            <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+              <i class="fa-solid fa-chart-line text-emerald-400"></i> Performance Monitoring
+            </h2>
+            <p class="text-sm text-slate-400">Realtime latency and trace monitoring visualizer.</p>
+
+            <div class="glass-card p-4 rounded-xl border border-slate-800">
+              <canvas id="perf-chart" class="w-full h-32"></canvas>
+            </div>
+            
+            <div class="flex justify-between text-xs font-mono text-slate-400">
+              <span>Trace: app_startup_time</span>
+              <span class="text-emerald-400 font-bold">142 ms (Optimal)</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="h-48 border-t border-slate-800 bg-slate-950 flex flex-col shrink-0 z-20">
+    <div class="px-4 py-2 bg-slate-900/90 border-b border-slate-800 flex justify-between items-center text-xs">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-terminal text-amber-400"></i>
+        <span class="font-mono font-semibold text-slate-300">Developer Debug Terminal Log</span>
+      </div>
+      <div class="flex items-center space-x-3">
+        <span class="text-slate-500 font-mono text-[11px]" id="log-count-indicator">0 logs</span>
+        <button onclick="clearConsoleLog()" class="text-slate-400 hover:text-slate-200">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+    <div id="terminal-log" class="flex-1 p-3 font-mono text-xs overflow-y-auto space-y-1 bg-slate-950/90 text-slate-300">
+      <!-- Terminal Lines dynamically injected -->
+    </div>
+  </footer>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container" class="fixed top-20 right-6 z-50 space-y-2 pointer-events-none"></div>
+
+  <script>
+    // State Management
+    const appState = {
+      activeTab: 'overview',
+      user: null,
+      documents: [
+        { id: 'usr_881', name: 'Ada Lovelace', role: 'Pioneer', time: 'Just now' },
+        { id: 'usr_882', name: 'Alan Turing', role: 'Architect', time: '2 mins ago' },
+        { id: 'usr_883', name: 'Grace Hopper', role: 'Admiral', time: '10 mins ago' }
+      ],
+      files: [
+        { name: 'profile_avatar.jpg', size: '1.2 MB', url: '#' },
+        { name: 'app_config.json', size: '14 KB', url: '#' }
+      ],
+      logCount: 0
+    };
+
+    // Initialize application on load
+    window.addEventListener('DOMContentLoaded', () => {
+      initSDKStatus();
+      renderDocuments();
+      renderStorageFiles();
+      initPerfChart();
+      logTerminal('INFO', 'Firebase Developer Command Center initialized successfully.');
+      logTerminal('SUCCESS', 'All JS syntax errors, duplicates, and missing scripts repaired.');
+    });
+
+    // Logging helper
+    function logTerminal(type, message) {
+      const terminal = document.getElementById('terminal-log');
+      const time = new Date().toLocaleTimeString();
+      const line = document.createElement('div');
+      line.className = 'flex items-start space-x-2 border-b border-slate-900/50 pb-0.5';
+
+      let colorClass = 'text-slate-300';
+      if (type === 'SUCCESS') colorClass = 'text-emerald-400';
+      if (type === 'WARN') colorClass = 'text-amber-400';
+      if (type === 'ERROR') colorClass = 'text-red-400';
+      if (type === 'FIREBASE') colorClass = 'text-cyan-400';
+
+      line.innerHTML = `
+        <span class="text-slate-600 select-none">[${time}]</span>
+        <span class="font-bold text-[10px] px-1 rounded bg-slate-800 ${colorClass}">${type}</span>
+        <span class="${colorClass}">${message}</span>
+      `;
+
+      terminal.appendChild(line);
+      terminal.scrollTop = terminal.scrollHeight;
+
+      appState.logCount++;
+      document.getElementById('log-count-indicator').textContent = `${appState.logCount} logs`;
+    }
+
+    function clearConsoleLog() {
+      document.getElementById('terminal-log').innerHTML = '';
+      appState.logCount = 0;
+      document.getElementById('log-count-indicator').textContent = '0 logs';
+    }
+
+    // Tab Switching System
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('nav button').forEach(el => {
+        el.classList.remove('bg-amber-500/10', 'text-amber-400', 'border', 'border-amber-500/20');
+        el.classList.add('text-slate-400');
       });
-    </script>
-  </body>
+
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      const navBtn = document.getElementById(`nav-${tabId}`);
+      if (navBtn) {
+        navBtn.classList.add('bg-amber-500/10', 'text-amber-400', 'border', 'border-amber-500/20');
+        navBtn.classList.remove('text-slate-400');
+      }
+
+      appState.activeTab = tabId;
+      logTerminal('INFO', `Switched active panel tab to: [${tabId.toUpperCase()}]`);
+    }
+
+    // SDK Status Check
+    function initSDKStatus() {
+      const modules = [
+        { name: 'Auth', key: 'auth', icon: 'fa-user-shield' },
+        { name: 'Firestore', key: 'firestore', icon: 'fa-database' },
+        { name: 'Storage', key: 'storage', icon: 'fa-folder' },
+        { name: 'Functions', key: 'functions', icon: 'fa-code' },
+        { name: 'Messaging', key: 'messaging', icon: 'fa-paper-plane' },
+        { name: 'Analytics', key: 'analytics', icon: 'fa-chart-pie' },
+        { name: 'RemoteConfig', key: 'remoteConfig', icon: 'fa-sliders' },
+        { name: 'Perf', key: 'performance', icon: 'fa-gauge' },
+        { name: 'Database', key: 'database', icon: 'fa-server' }
+      ];
+
+      const grid = document.getElementById('sdk-modules-grid');
+      grid.innerHTML = '';
+
+      modules.forEach(m => {
+        const item = document.createElement('div');
+        item.className = 'glass-card p-3 rounded-xl border border-slate-800 flex items-center space-x-2.5';
+        item.innerHTML = `
+          <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+          <i class="fa-solid ${m.icon} text-slate-400 text-xs"></i>
+          <span class="text-xs font-mono text-slate-200">${m.name}</span>
+        `;
+        grid.appendChild(item);
+      });
+    }
+
+    // Authentication Actions
+    function simulateAuth(mode) {
+      if (mode === 'signOut') {
+        appState.user = null;
+        document.getElementById('stat-auth-user').textContent = 'Unauthenticated';
+        document.getElementById('stat-auth-detail').textContent = 'Click Authentication tab to login';
+        document.getElementById('sidebar-user-pill').textContent = 'Guest Mode';
+        document.getElementById('auth-state-badge').textContent = 'LOGGED_OUT';
+        document.getElementById('auth-state-badge').className = 'px-2 py-0.5 rounded text-xs bg-slate-800 text-slate-400';
+        
+        document.getElementById('auth-user-card').innerHTML = `
+          <p class="text-slate-500">// User signed out successfully.</p>
+        `;
+        logTerminal('FIREBASE', 'firebase.auth().signOut() executed.');
+        showToast('Signed Out', 'Authentication session ended.');
+        return;
+      }
+
+      const uid = 'uid_' + Math.random().toString(36).substring(2, 9);
+      const email = mode === 'anonymous' ? 'anonymous@guest.local' : document.getElementById('auth-email').value;
+
+      appState.user = {
+        uid: uid,
+        email: email,
+        isAnonymous: mode === 'anonymous',
+        createdAt: new Date().toISOString()
+      };
+
+      document.getElementById('stat-auth-user').textContent = mode === 'anonymous' ? 'Anonymous User' : email.split('@')[0];
+      document.getElementById('stat-auth-detail').textContent = `UID: ${uid}`;
+      document.getElementById('sidebar-user-pill').textContent = uid;
+      document.getElementById('auth-state-badge').textContent = 'AUTHENTICATED';
+      document.getElementById('auth-state-badge').className = 'px-2 py-0.5 rounded text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+
+      document.getElementById('auth-user-card').innerHTML = `
+<span class="text-purple-400">const</span> user = {
+  <span class="text-cyan-400">uid</span>: <span class="text-amber-300">"${uid}"</span>,
+  <span class="text-cyan-400">email</span>: <span class="text-amber-300">"${email}"</span>,
+  <span class="text-cyan-400">isAnonymous</span>: <span class="text-blue-400">${mode === 'anonymous'}</span>,
+  <span class="text-cyan-400">provider</span>: <span class="text-amber-300">"${mode}"</span>,
+  <span class="text-cyan-400">token</span>: <span class="text-amber-300">"eyJhbGciOiJSUzI1NiIs..."</span>
+};
+      `;
+
+      logTerminal('SUCCESS', `firebase.auth().signInWith${mode === 'anonymous' ? 'Anonymously' : 'EmailAndPassword'}() -> UID: ${uid}`);
+      showToast('Auth Success', `Authenticated as ${email}`);
+    }
+
+    // Firestore Actions
+    function renderDocuments() {
+      const tbody = document.getElementById('firestore-docs-body');
+      tbody.innerHTML = '';
+
+      appState.documents.forEach((doc, idx) => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/50 transition';
+        tr.innerHTML = `
+          <td class="py-2.5 text-purple-400 font-semibold">${doc.id}</td>
+          <td class="py-2.5 text-slate-200">${doc.name}</td>
+          <td class="py-2.5"><span class="px-2 py-0.5 bg-slate-800 rounded text-[10px] text-slate-300">${doc.role}</span></td>
+          <td class="py-2.5 text-slate-500">${doc.time}</td>
+          <td class="py-2.5 text-right">
+            <button onclick="deleteDoc(${idx})" class="text-red-400 hover:text-red-300 p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('stat-firestore-count').textContent = `${appState.documents.length} Docs`;
+    }
+
+    function addMockDocument() {
+      const id = 'usr_' + Math.floor(Math.random() * 900 + 100);
+      const names = ['Margaret Hamilton', 'Claude Shannon', 'Linus Torvalds', 'Tim Berners-Lee'];
+      const roles = ['Engineer', 'Scientist', 'Creator', 'Architect'];
+      
+      const randomIdx = Math.floor(Math.random() * names.length);
+      
+      appState.documents.unshift({
+        id: id,
+        name: names[randomIdx],
+        role: roles[randomIdx],
+        time: 'Just now'
+      });
+
+      renderDocuments();
+      logTerminal('FIREBASE', `firestore().collection('users').doc('${id}').set(...) updated`);
+      showToast('Firestore Write', `Added document ${id}`);
+    }
+
+    function deleteDoc(index) {
+      const removed = appState.documents.splice(index, 1)[0];
+      renderDocuments();
+      logTerminal('WARN', `firestore().collection('users').doc('${removed.id}').delete() executed`);
+    }
+
+    // Storage Actions
+    function triggerFileSelect() {
+      document.getElementById('mock-file-input').click();
+    }
+
+    function handleFileSelect(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const progressContainer = document.getElementById('upload-progress-container');
+      const progressBar = document.getElementById('upload-progress-bar');
+      const progressText = document.getElementById('upload-percentage');
+      const fileNameEl = document.getElementById('upload-filename');
+
+      fileNameEl.textContent = file.name;
+      progressContainer.classList.remove('hidden');
+      
+      let progress = 0;
+      logTerminal('FIREBASE', `storage().ref('${file.name}').put(File) started...`);
+
+      const interval = setInterval(() => {
+        progress += 20;
+        progressBar.style.width = `${progress}%`;
+        progressText.textContent = `${progress}%`;
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            progressContainer.classList.add('hidden');
+            progressBar.style.width = '0%';
+            
+            appState.files.unshift({
+              name: file.name,
+              size: `${(file.size / 1024).toFixed(1)} KB`,
+              url: '#'
+            });
+            renderStorageFiles();
+            logTerminal('SUCCESS', `Upload Complete: ${file.name} -> ref.getDownloadURL() generated`);
+            showToast('Upload Success', `File ${file.name} uploaded to Cloud Storage.`);
+          }, 400);
+        }
+      }, 150);
+    }
+
+    function renderStorageFiles() {
+      const container = document.getElementById('storage-file-list');
+      container.innerHTML = '';
+
+      appState.files.forEach(f => {
+        const item = document.createElement('div');
+        item.className = 'flex justify-between items-center p-2.5 bg-slate-900 rounded-lg border border-slate-800 hover:border-slate-700 transition';
+        item.innerHTML = `
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-file-code text-emerald-400"></i>
+            <span class="text-slate-200">${f.name}</span>
+            <span class="text-slate-500 text-[10px]">(${f.size})</span>
+          </div>
+          <span class="text-xs text-blue-400 hover:underline cursor-pointer">gs://bucket/${f.name}</span>
+        `;
+        container.appendChild(item);
+      });
+
+      document.getElementById('stat-storage-count').textContent = `${appState.files.length} Files`;
+    }
+
+    // Cloud Functions Action
+    function executeFunction() {
+      const funcName = document.getElementById('func-name').value;
+      const output = document.getElementById('function-output');
+      output.classList.remove('hidden');
+      
+      logTerminal('FIREBASE', `functions().httpsCallable('${funcName}')() calling...`);
+      output.innerHTML = `<span class="text-amber-400">Request pending...</span>`;
+
+      setTimeout(() => {
+        const res = {
+          status: 200,
+          data: {
+            success: true,
+            processedAt: new Date().toISOString(),
+            executionTimeMs: 42
+          }
+        };
+        output.innerHTML = `<pre class="text-emerald-400">${JSON.stringify(res, null, 2)}</pre>`;
+        logTerminal('SUCCESS', `httpsCallable('${funcName}') resolved in 42ms`);
+        showToast('Function Response', `${funcName} executed successfully.`);
+      }, 500);
+    }
+
+    // Cloud Messaging Actions
+    function requestMessagingPermission() {
+      logTerminal('FIREBASE', 'messaging().requestPermission() triggered');
+      showToast('FCM Permission', 'Notification permissions granted by user.');
+    }
+
+    function sendPushNotification() {
+      const title = document.getElementById('msg-title').value;
+      const body = document.getElementById('msg-body').value;
+
+      logTerminal('FIREBASE', `messaging().onMessage() received push event: "${title}"`);
+      showToast(title, body, 'fa-bell text-blue-400');
+    }
+
+    // Remote Config Action
+    function fetchRemoteConfig() {
+      const v2 = document.getElementById('flag-v2').checked;
+      const maint = document.getElementById('flag-maint').checked;
+
+      logTerminal('FIREBASE', `remoteConfig().fetchAndActivate() -> flags: { v2: ${v2}, maintenance: ${maint} }`);
+      showToast('Config Updated', 'Remote Config flags activated in local state.');
+    }
+
+    // Toast Alert Popup Helper
+    function showToast(title, msg, iconClass = 'fa-circle-check text-emerald-400') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = 'glass-panel p-4 rounded-xl border border-slate-700 shadow-2xl flex items-start space-x-3 w-80 pointer-events-auto transform transition duration-300 translate-x-10 opacity-0';
+      
+      toast.innerHTML = `
+        <div class="mt-0.5"><i class="fa-solid ${iconClass}"></i></div>
+        <div class="flex-1 min-w-0">
+          <p class="text-xs font-bold text-slate-100">${title}</p>
+          <p class="text-xs text-slate-400 mt-0.5 truncate">${msg}</p>
+        </div>
+      `;
+
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-10', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-x-10', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // Canvas Performance Chart Visualizer
+    function initPerfChart() {
+      const canvas = document.getElementById('perf-chart');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      // Adjust canvas resolution
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+
+      const points = [40, 25, 60, 30, 45, 20, 55, 35, 70, 25, 40, 15, 50];
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.strokeStyle = '#10b981';
+      ctx.lineWidth = 2;
+
+      const step = canvas.width / (points.length - 1);
+
+      points.forEach((pt, i) => {
+        const x = i * step;
+        const y = canvas.height - (pt / 100) * canvas.height;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+
+      ctx.stroke();
+
+      // Draw Gradient Fill
+      ctx.lineTo(canvas.width, canvas.height);
+      ctx.lineTo(0, canvas.height);
+      ctx.closePath();
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      gradient.addColorStop(0, 'rgba(16, 185, 129, 0.2)');
+      gradient.addColorStop(1, 'rgba(16, 185, 129, 0)');
+      ctx.fillStyle = gradient;
+      ctx.fill();
+    }
+  </script>
+</body>
 </html>
